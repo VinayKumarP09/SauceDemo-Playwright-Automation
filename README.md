@@ -1,3 +1,7 @@
+
+![Playwright Tests](https://github.com/VinayKumarP09/SauceDemo-Playwright-Automation/actions/workflows/playwright.yml/badge.svg)
+
+
 # SauceDemo Playwright Automation
 
 ## Project Overview
