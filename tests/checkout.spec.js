@@ -105,12 +105,18 @@ test('Verify checkout with empty last name', async ({ page }) => {
   await productsPage.openCart();
   await cartPage.checkoutButton.click();
 
-  await checkoutPage.enterCheckoutDetails('', '', '500001');
+  //await checkoutPage.enterCheckoutDetails('', '', '500001');
+
+  await checkoutPage.enterCheckoutDetails(
+  'Vinay',
+  '',
+  '500001'
+);
 
   await checkoutPage.continueCheckout();
 
   await expect(page.locator('[data-test="error"]'))
-    .toContainText('Error: First Name is required');
+    .toContainText('Error: Last Name is required');
 });
 
 test('Verify checkout with empty postal code', async ({ page }) => {
