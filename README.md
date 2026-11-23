@@ -1,6 +1,8 @@
 
-![Playwright Tests](https://github.com/VinayKumarP09/SauceDemo-Playwright-Automation/actions/workflows/playwright.yml/badge.svg)
+//![Playwright Tests](https://github.com/VinayKumarP09/SauceDemo-Playwright-Automation/actions/workflows/playwright.yml/badge.svg)
 
+
+![Playwright Tests](https://github.com/VinayKumarP09/SauceDemo-Playwright-Automation/actions/workflows/playwright.yml/badge.svg)
 
 # SauceDemo Playwright Automation
 
@@ -146,3 +148,10 @@ https://www.saucedemo.com/
 Vinay Kumar Pedda
 
 GitHub: https://github.com/VinayKumarP09
+
+
+## Test Execution Report
+
+The Playwright HTML report confirms that all 11 automated tests passed successfully with 0 failures.
+
+![Playwright Test Execution Report](screenshots/playwright-report.png)
