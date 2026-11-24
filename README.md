@@ -2,6 +2,7 @@
 
 ![Playwright Tests](https://github.com/VinayKumarP09/SauceDemo-Playwright-Automation/actions/workflows/playwright.yml/badge.svg)
 
+
 ## Project Overview
 
 This project is a QA automation framework developed using Playwright with JavaScript.
@@ -219,6 +220,12 @@ API practice application: [JSONPlaceholder](https://jsonplaceholder.typicode.com
 ## Test Execution Report
 
 Playwright generates an HTML report after test execution. Run `npx playwright show-report` to view it locally.
+
+## Test Execution Report
+
+Playwright generates an HTML report after test execution. Run `npx playwright show-report` to view it locally.
+
+![Latest Playwright Test Execution Report](screenshots/playwright-report-latest.png)
 
 ## Author
 
