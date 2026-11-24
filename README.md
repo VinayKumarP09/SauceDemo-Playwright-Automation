@@ -155,3 +155,29 @@ GitHub: https://github.com/VinayKumarP09
 The Playwright HTML report confirms that all 11 automated tests passed successfully with 0 failures.
 
 ![Playwright Test Execution Report](screenshots/playwright-report.png)
+
+
+## API Testing – Postman
+
+API testing is performed using Postman with JSONPlaceholder REST APIs.
+
+### API Test Coverage
+
+- GET – Retrieve a single post
+- GET – Retrieve all posts
+- POST – Create a new post
+- PUT – Update an existing post
+- PATCH – Partially update a post
+- DELETE – Delete an existing post
+- Request header validation
+- Query parameter validation
+- Status code and response body validation
+- JSON schema validation
+- Dynamic test data validation
+- Response time validation
+
+### Collection
+
+The Postman collection is available in:
+
+`postman/SauceDemo-Portfolio-API-Testing.json`
