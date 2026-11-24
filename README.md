@@ -1,16 +1,14 @@
-
-//![Playwright Tests](https://github.com/VinayKumarP09/SauceDemo-Playwright-Automation/actions/workflows/playwright.yml/badge.svg)
-
+# SauceDemo Playwright Automation
 
 ![Playwright Tests](https://github.com/VinayKumarP09/SauceDemo-Playwright-Automation/actions/workflows/playwright.yml/badge.svg)
 
-# SauceDemo Playwright Automation
-
 ## Project Overview
 
-This project is a UI automation testing framework developed using Playwright with JavaScript. It automates important end-to-end scenarios on the SauceDemo e-commerce application.
+This project is a QA automation framework developed using Playwright with JavaScript.
 
-The framework follows the Page Object Model (POM) design pattern to improve code reusability, maintainability, and readability.
+It automates end-to-end UI scenarios on the SauceDemo e-commerce application and performs REST API testing using Playwright API testing and Postman.
+
+The UI framework follows the Page Object Model (POM) design pattern to improve code reusability, maintainability, and readability.
 
 ## Technologies Used
 
@@ -19,8 +17,10 @@ The framework follows the Page Object Model (POM) design pattern to improve code
 - Node.js
 - Page Object Model (POM)
 - JSON Test Data
+- Postman
+- REST API Testing
 - Git and GitHub
-- GitHub Actions (CI)
+- GitHub Actions (CI/CD)
 
 ## Project Structure
 
@@ -41,41 +41,92 @@ SauceDemo-Playwright-Automation/
 │   └── users.json
 │
 ├── tests/
+│   ├── api/
+│   │   ├── get-post.spec.js
+│   │   ├── get-all-posts.spec.js
+│   │   ├── create-post.spec.js
+│   │   ├── update-post.spec.js
+│   │   ├── patch-post.spec.js
+│   │   └── delete-post.spec.js
+│   │
 │   ├── login.spec.js
 │   ├── products.spec.js
 │   ├── cart.spec.js
-│   ├── checkout.spec.js
-│   └── example.spec.js
+│   └── checkout.spec.js
+│
+├── postman/
+│   └── SauceDemo-Portfolio-API-Testing.json
+│
+├── screenshots/
+│   └── playwright-report.png
 │
 ├── .gitignore
 ├── package.json
 ├── package-lock.json
-└── playwright.config.js
+├── playwright.config.js
+└── README.md
 ```
 
-## Automated Test Scenarios
+## UI Automated Test Scenarios
 
 ### Login
+
 - Verify successful login with valid credentials.
 - Verify login failure with invalid credentials.
 - Verify locked-out user login.
 
 ### Products
+
 - Verify products page after login.
 - Verify product count.
 - Add a product to the shopping cart.
 - Verify cart badge count.
 
 ### Shopping Cart
+
 - Verify cart contents.
 - Verify product name and price.
 - Remove a product from the cart.
 
 ### Checkout
+
 - Complete a successful checkout.
 - Verify validation for missing first name.
 - Verify validation for missing last name.
 - Verify validation for missing postal code.
+
+## API Testing – Playwright
+
+API automation is implemented using Playwright API testing with JSONPlaceholder REST APIs.
+
+### API Test Coverage
+
+- GET – Retrieve a single post.
+- GET – Retrieve all posts.
+- POST – Create a new post.
+- PUT – Update an existing post.
+- PATCH – Partially update a post.
+- DELETE – Delete an existing post.
+- Validate HTTP status codes.
+- Validate response body and properties.
+
+## API Testing – Postman
+
+API testing is also performed using Postman with JSONPlaceholder REST APIs.
+
+### Postman Test Coverage
+
+- GET, POST, PUT, PATCH, and DELETE requests.
+- Request header validation.
+- Query parameter validation.
+- Status code and response body validation.
+- JSON schema validation.
+- Dynamic test data validation.
+- Response time validation.
+
+The exported Postman collection is available at:
+
+`postman/SauceDemo-Portfolio-API-Testing.json`
 
 ## Installation and Setup
 
@@ -103,7 +154,7 @@ Install Playwright browsers:
 npx playwright install
 ```
 
-## Execute Tests
+## Test Execution
 
 Run all tests:
 
@@ -129,55 +180,48 @@ Run a specific test file:
 npx playwright test tests/login.spec.js --project=chromium
 ```
 
+Run API tests:
+
+```bash
+npx playwright test tests/api --project=chromium
+```
+
 View the HTML report:
 
 ```bash
 npx playwright show-report
 ```
 
-## Test Execution
+## Test Execution Results
 
-The current Chromium test suite has successfully executed **11 tests with 0 failures**.
+The current Chromium test suite contains:
+
+- UI Automation: 9 tests
+- API Automation: 6 tests
+- Total: 15 tests
+
+Latest local execution: **15 passed, 0 failed**.
+
+## CI/CD – GitHub Actions
+
+GitHub Actions is configured to execute the Playwright test suite automatically.
+
+The workflow runs the automated tests and reports the execution result.
+
+[View GitHub Actions](https://github.com/VinayKumarP09/SauceDemo-Playwright-Automation/actions)
 
 ## Application Under Test
 
-https://www.saucedemo.com/
+[SauceDemo](https://www.saucedemo.com/)
 
-## Author
-
-Vinay Kumar Pedda
-
-GitHub: https://github.com/VinayKumarP09
-
+API practice application: [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
 
 ## Test Execution Report
 
-The Playwright HTML report confirms that all 11 automated tests passed successfully with 0 failures.
+Playwright generates an HTML report after test execution. Run `npx playwright show-report` to view it locally.
 
-![Playwright Test Execution Report](screenshots/playwright-report.png)
+## Author
 
+**Vinay Kumar Pedda**
 
-## API Testing – Postman
-
-API testing is performed using Postman with JSONPlaceholder REST APIs.
-
-### API Test Coverage
-
-- GET – Retrieve a single post
-- GET – Retrieve all posts
-- POST – Create a new post
-- PUT – Update an existing post
-- PATCH – Partially update a post
-- DELETE – Delete an existing post
-- Request header validation
-- Query parameter validation
-- Status code and response body validation
-- JSON schema validation
-- Dynamic test data validation
-- Response time validation
-
-### Collection
-
-The Postman collection is available in:
-
-`postman/SauceDemo-Portfolio-API-Testing.json`
+GitHub: [VinayKumarP09](https://github.com/VinayKumarP09)
