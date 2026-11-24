@@ -3,7 +3,9 @@ const { test, expect } = require('@playwright/test');
 
 test('GET - Verify all posts', async ({ request }) => {
 
-    const response = await request.get('https://jsonplaceholder.typicode.com/posts');
+   // const response = await request.get('https://jsonplaceholder.typicode.com/posts');
+
+   const response = await request.get('/posts');
 
     expect(response.status()).toBe(200);
 

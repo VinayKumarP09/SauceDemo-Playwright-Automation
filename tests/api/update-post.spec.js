@@ -3,8 +3,9 @@ const { test, expect } = require('@playwright/test');
 
 test('PUT - Update an existing post', async ({ request }) => {
 
-    const response = await request.put(
-        'https://jsonplaceholder.typicode.com/posts/1',
+    // const response = await request.put('https://jsonplaceholder.typicode.com/posts/1',
+
+     const response = await request.put('posts/1',
         {
             data: {
                 id: 1,

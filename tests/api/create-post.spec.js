@@ -3,8 +3,9 @@ const { test, expect } = require('@playwright/test');
 
 test('POST - Create a new post', async ({ request }) => {
 
-    const response = await request.post(
-        'https://jsonplaceholder.typicode.com/posts',
+  //  const response = await request.post('https://jsonplaceholder.typicode.com/posts',
+
+     const response = await request.post('/posts',   
         {
             data: {
                 title: 'QA Automation Practice',

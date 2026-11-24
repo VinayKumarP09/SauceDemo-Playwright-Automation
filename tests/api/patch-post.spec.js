@@ -3,8 +3,9 @@ const { test, expect } = require('@playwright/test');
 
 test('PATCH - Update post title', async ({ request }) => {
 
-    const response = await request.patch(
-        'https://jsonplaceholder.typicode.com/posts/1',
+   // const response = await request.patch('https://jsonplaceholder.typicode.com/posts/1',
+
+          const response = await request.patch('posts/1',
         {
             data: {
                 title: 'Updated Title Using PATCH'
